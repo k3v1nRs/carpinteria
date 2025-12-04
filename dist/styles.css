@@ -1,0 +1,197 @@
+/* ---------------------------------------------------- */
+/* TIPOGRAFÍA Y BASE */
+/* ---------------------------------------------------- */
+body {
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #FAF8F5; /* Blanco Roto/Lino: Base suave */
+    color: #4E342E; /* Café Oscuro: Texto amigable a la vista */
+    line-height: 1.6; /* Mayor espaciado para mejor lectura */
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif; 
+    color: #795548; /* Café Miel: Cálido y profesional */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ---------------------------------------------------- */
+/* ESTRUCTURA Y CABECERA */
+/* ---------------------------------------------------- */
+header {
+    background-color: #795548; 
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+header h1 {
+    color: white;
+    font-size: 2.2em;
+    font-weight: 300; /* Fuente más delgada para un look moderno */
+    margin-bottom: 5px;
+}
+
+main {
+    max-width: 900px;
+    margin: 50px auto; /* Más espacio vertical */
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra profesional y notoria */
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 20px 0; /* Sin padding lateral, el main lo maneja */
+    border-bottom: 1px dashed #EFEBE9; /* Separador sutil */
+}
+
+section:last-of-type {
+    border-bottom: none; /* Eliminar borde en la última sección */
+}
+
+/* ---------------------------------------------------- */
+/* FORMULARIO Y BOTONES */
+/* ---------------------------------------------------- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #795548; /* Color de label */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #EFEBE9; /* Borde muy suave */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #FAFAFA; /* Fondo ligero para los campos */
+}
+
+button[type="submit"] {
+    background-color: #BCAAA4; /* Gris Rosado Suave: Botón desaturado */
+    color: #4E342E; /* Texto oscuro en botón claro */
+    padding: 14px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+    background-color: #A1887F; /* Ligeramente más intenso al pasar el ratón */
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------- */
+/* LOCALIZACIÓN Y FOOTER */
+/* ---------------------------------------------------- */
+.mapa-contenedor {
+    margin-top: 25px;
+    /* Ajusta el iframe al tamaño del contenedor */
+}
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 350px;
+    border: 3px solid #EFEBE9; /* Borde más suave */
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background-color: #795548;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS DEL CARRUSEL (Nuestros Trabajos) */
+/* ---------------------------------------------------- */
+
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Oculta las imágenes que están fuera de vista */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+    display: flex; /* Coloca todos los slides en una sola fila */
+    transition: transform 0.5s ease-in-out; /* Animación de movimiento */
+}
+
+.carousel-slide {
+    display: flex;
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del contenedor */
+    width: 100%;
+    gap: 10px; /* Espacio entre las imágenes dentro de un slide */
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: calc(25% - 8px); /* 4 imágenes por slide (100% / 4) menos el espacio del gap */
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover; /* Asegura que la imagen cubra su contenedor sin deformarse */
+    transition: transform 0.3s;
+}
+
+/* Efecto sutil al pasar el ratón */
+.carousel-slide img:hover {
+    transform: scale(1.03); 
+}
+
+/* Estilos de los botones de navegación */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(121, 85, 72, 0.7); /* Café semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background: #795548; /* Café sólido */
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Estilos para la lista de trabajos */
+.lista-trabajos {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #4E342E;
+}
