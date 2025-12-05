@@ -16,7 +16,7 @@ document.getElementById('cotizacionForm').addEventListener('submit', async funct
 
     // 2. Definir la URL de tu API en Azure
     // **IMPORTANTE**: Reemplaza esta URL con la de tu Azure App Service
-    const apiUrl = 'https://carpinteria-ap.azurewebsites.net/api/cotizaciones'; 
+    const apiUrl = 'https://carpinteria-ap-g6d8ggh3grevbwcx.eastus2-01.azurewebsites.net/api/cotizaciones'; 
 
     try {
         // 3. Enviar los datos a la API (Backend)
