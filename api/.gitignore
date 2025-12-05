@@ -1,0 +1,19 @@
+# Archivos de entorno local
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependencias
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local
+iisnode/

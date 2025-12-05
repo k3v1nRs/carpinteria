@@ -4,7 +4,13 @@
   "description": "API para guardar cotizaciones de carpinteria",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'No build needed'",
+    "postinstall": "echo 'Installation complete'"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "cors": "^2.8.5",

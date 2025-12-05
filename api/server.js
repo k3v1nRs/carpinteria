@@ -4,7 +4,7 @@ const cors = require('cors');
 const { Pool } = require('pg'); // Cliente de PostgreSQL
 
 const app = express();
-const port = 3000; 
+const port = process.env.PORT || 3000; 
 
 // =================================================================
 // 1. CONFIGURACIÓN DE LA CONEXIÓN A POSTGRESQL (NEON)
@@ -90,8 +90,8 @@ pool.connect()
 
         // 2. Iniciar el servidor Express
         app.listen(port, () => {
-            console.log(`Servidor API escuchando en http://localhost:${port}`);
-            console.log("Frontend URL (para prueba): http://localhost:3000/api/cotizaciones");
+            console.log(`✅ Servidor API escuchando en puerto ${port}`);
+            console.log(`Entorno: ${process.env.NODE_ENV || 'development'}`);
         });
 
     })
